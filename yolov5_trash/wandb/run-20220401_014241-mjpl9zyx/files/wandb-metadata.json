@@ -1,0 +1,32 @@
+{
+    "os": "Linux-4.4.0-59-generic-x86_64-with-debian-buster-sid",
+    "python": "3.7.11",
+    "heartbeatAt": "2022-04-01T01:42:45.974207",
+    "startedAt": "2022-04-01T01:42:41.310942",
+    "docker": null,
+    "gpu": "Tesla V100-PCIE-32GB",
+    "gpu_count": 1,
+    "cpu_count": 8,
+    "cuda": null,
+    "args": [
+        "--weights",
+        "yolov5x6.pt",
+        "--data",
+        "trash.yaml",
+        "--hyp",
+        "hyp.p6.yaml",
+        "--epochs",
+        "100",
+        "--batch_size",
+        "12",
+        "--img_size",
+        "1024",
+        "--project",
+        "../output/yolov5/"
+    ],
+    "state": "running",
+    "program": "-m train",
+    "host": "98e9abbe9791",
+    "username": "root",
+    "executable": "/opt/conda/envs/detection/bin/python3"
+}
