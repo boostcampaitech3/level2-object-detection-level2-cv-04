@@ -3,9 +3,9 @@ import json
 import shutil
 
 DATAROOT = "./"
-ALLJSON = os.path.join(DATAROOT,"train.json")
-TRAINJSON = os.path.join(DATAROOT,"train_1.json")
-VALIDJSON = os.path.join(DATAROOT,"valid_1.json")
+ALLJSON = os.path.join(DATAROOT,"train_pseudo.json")
+TRAINJSON = os.path.join(DATAROOT,"train_pseudo_k4.json")
+VALIDJSON = os.path.join(DATAROOT,"valid_4.json")
 IMAGEPATH = os.path.join(DATAROOT,"train/")
 
 '''
@@ -59,8 +59,8 @@ def _make_directory(paths):
 Wrap func
 '''
 def make(images,json,path):
-	imagePath = DATAROOT+'yolov5_1/images/'+path
-	labelPath = DATAROOT+'yolov5_1/labels/'+path
+	imagePath = DATAROOT+'yolov5_pseudo_k4/images/'+path
+	labelPath = DATAROOT+'yolov5_pseudo_k4/labels/'+path
 
 	_make_directory([imagePath,labelPath])
 	_make_yolo_dataset(images,json,imagePath,labelPath)
@@ -75,18 +75,17 @@ def __main__():
 
 	images = json_data["images"]
 	annotations = json_data["annotations"]
+	for image in images:
+		image['bbox'] = []
+		image['bbox_category'] = []
 
 	for annotation in annotations:
 		image_id = annotation["image_id"]
 		category_id = annotation["category_id"]
 		bbox = annotation["bbox"]
 
-		if 'bbox' in images[image_id]:
-			images[image_id]['bbox'].append(bbox)
-			images[image_id]['bbox_category'].append(category_id)
-		else:
-			images[image_id]['bbox'] = [bbox]
-			images[image_id]['bbox_category'] = [category_id]
+		images[image_id]['bbox'].append(bbox)
+		images[image_id]['bbox_category'].append(category_id)
 	
 
 	make(images,TRAINJSON, 'train')
