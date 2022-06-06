@@ -1,0 +1,258 @@
+
+Downloading https://github.com/ultralytics/yolov5/releases/download/v6.1/yolov5x6.pt to yolov5x6.pt...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████| 270M/270M [00:44<00:00, 6.35MB/s]
+Overriding model.yaml nc=80 with nc=10
+                 from  n    params  module                                  arguments
+  0                -1  1      8800  models.common.Conv                      [3, 80, 6, 2, 2]
+  1                -1  1    115520  models.common.Conv                      [80, 160, 3, 2]
+  2                -1  4    309120  models.common.C3                        [160, 160, 4]
+  3                -1  1    461440  models.common.Conv                      [160, 320, 3, 2]
+  4                -1  8   2259200  models.common.C3                        [320, 320, 8]
+  5                -1  1   1844480  models.common.Conv                      [320, 640, 3, 2]
+  6                -1 12  13125120  models.common.C3                        [640, 640, 12]
+  7                -1  1   5531520  models.common.Conv                      [640, 960, 3, 2]
+  8                -1  4  11070720  models.common.C3                        [960, 960, 4]
+  9                -1  1  11061760  models.common.Conv                      [960, 1280, 3, 2]
+ 10                -1  4  19676160  models.common.C3                        [1280, 1280, 4]
+ 11                -1  1   4099840  models.common.SPPF                      [1280, 1280, 5]
+ 12                -1  1   1230720  models.common.Conv                      [1280, 960, 1, 1]
+ 13                -1  1         0  torch.nn.modules.upsampling.Upsample    [None, 2, 'nearest']
+ 14           [-1, 8]  1         0  models.common.Concat                    [1]
+ 15                -1  4  11992320  models.common.C3                        [1920, 960, 4, False]
+ 16                -1  1    615680  models.common.Conv                      [960, 640, 1, 1]
+ 17                -1  1         0  torch.nn.modules.upsampling.Upsample    [None, 2, 'nearest']
+ 18           [-1, 6]  1         0  models.common.Concat                    [1]
+ 19                -1  4   5332480  models.common.C3                        [1280, 640, 4, False]
+ 20                -1  1    205440  models.common.Conv                      [640, 320, 1, 1]
+ 21                -1  1         0  torch.nn.modules.upsampling.Upsample    [None, 2, 'nearest']
+ 22           [-1, 4]  1         0  models.common.Concat                    [1]
+ 23                -1  4   1335040  models.common.C3                        [640, 320, 4, False]
+ 24                -1  1    922240  models.common.Conv                      [320, 320, 3, 2]
+ 25          [-1, 20]  1         0  models.common.Concat                    [1]
+ 26                -1  4   4922880  models.common.C3                        [640, 640, 4, False]
+ 27                -1  1   3687680  models.common.Conv                      [640, 640, 3, 2]
+ 28          [-1, 16]  1         0  models.common.Concat                    [1]
+ 29                -1  4  11377920  models.common.C3                        [1280, 960, 4, False]
+ 30                -1  1   8296320  models.common.Conv                      [960, 960, 3, 2]
+ 31          [-1, 12]  1         0  models.common.Concat                    [1]
+ 32                -1  4  20495360  models.common.C3                        [1920, 1280, 4, False]
+ 33  [23, 26, 29, 32]  1    144180  models.yolo.Detect                      [10, [[19, 27, 44, 40, 38, 94], [96, 68, 86, 152, 180, 137], [140, 301, 303, 264, 238, 542], [436, 615, 739, 380, 925, 792]], [320, 640, 960, 1280]]
+Model Summary: 733 layers, 140121940 parameters, 140121940 gradients, 208.5 GFLOPs
+Transferred 955/963 items from yolov5x6.pt
+Scaled weight_decay = 0.00046875
+[34m[1moptimizer:[39m[22m SGD with parameter groups 159 weight, 163 weight (no decay), 163 bias
+[34m[1malbumentations: [39m[22mversion 1.0.3 required by YOLOv5, but version 0.4.6 is currently installed
+[34m[1mtrain: [39m[22mScanning '../dataset/yolov5_1/labels/train' images and labels...3896 found, 0 missing, 0 empty, 1 corrupted: 100%|█| 3896/3896 [00:00<00
+[34m[1mtrain: [39m[22mWARNING: Ignoring corrupted image and/or label ../dataset/yolov5_1/images/train/4041.jpg: duplicate labels
+[34m[1mtrain: [39m[22mNew cache created: ../dataset/yolov5_1/labels/train.cache
+Plotting labels...
+[34m[1mval: [39m[22mScanning '../dataset/yolov5_1/labels/valid' images and labels...987 found, 0 missing, 0 empty, 0 corrupted: 100%|█| 987/987 [00:00<00:00,
+[34m[1mval: [39m[22mNew cache created: ../dataset/yolov5_1/labels/valid.cache
+[34m[1mautoanchor: [39m[22mAnalyzing anchors... anchors/target = 6.36, Best Possible Recall (BPR) = 0.9985
+Image sizes 1024 train, 1024 val
+Using 8 dataloader workers
+Logging results to [1m../output/yolov5/exp2
+Starting training for 100 epochs...
+     Epoch   gpu_mem       box       obj       cls    labels  img_size
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      0/99       26G   0.06655   0.05389   0.05376        34      1024: 100%|████████████████████████████████| 325/325 [04:25<00:00,  1.23it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95:  93%|████████████████▋ | 39/42 [00:25<00:01,  1.58it/s]
+
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95: 100%|██████████████████| 42/42 [00:26<00:00,  1.58it/s]
+     Epoch   gpu_mem       box       obj       cls    labels  img_size
+
+
+
+
+
+
+
+
+
+
+
+
+
+      1/99       30G     0.053   0.04726   0.04525       199      1024:  11%|███▌                             | 35/325 [00:27<03:49,  1.27it/s]
+Traceback (most recent call last):
+  File "/opt/conda/envs/detection/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/opt/conda/envs/detection/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/opt/ml/detection/yolov5_trash/train.py", line 620, in <module>
+    main(opt)
+  File "/opt/ml/detection/yolov5_trash/train.py", line 517, in main
+    train(opt.hyp, opt, device, callbacks)
+  File "/opt/ml/detection/yolov5_trash/train.py", line 327, in train
+    scaler.step(optimizer)  # optimizer.step
+  File "/opt/conda/envs/detection/lib/python3.7/site-packages/torch/cuda/amp/grad_scaler.py", line 321, in step
+    retval = optimizer.step(*args, **kwargs)
+  File "/opt/conda/envs/detection/lib/python3.7/site-packages/torch/optim/lr_scheduler.py", line 67, in wrapper
+    return wrapped(*args, **kwargs)
+  File "/opt/conda/envs/detection/lib/python3.7/site-packages/torch/autograd/grad_mode.py", line 26, in decorate_context
+    return func(*args, **kwargs)
+  File "/opt/conda/envs/detection/lib/python3.7/site-packages/torch/optim/sgd.py", line 106, in step
+    buf.mul_(momentum).add_(d_p, alpha=1 - dampening)
+KeyboardInterrupt
